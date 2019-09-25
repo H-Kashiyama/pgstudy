@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+ 
+ li{font-size: 25px;
+   }
+ /*カテゴリー新規登録ボタン*/
+ .newctg {
+  color: #001100;
+  font-size: 27px;
+ }
+ 
+ .table table-striped table-bordered{
+  width: 50px;
+ }
+ 
+ .baktop{
+  color: teal;
+  
+ }
+
+ 
+.content {
+  color: navy;
+ }

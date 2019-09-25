@@ -1,0 +1,34 @@
+
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+        <div class="text-center">
+        <h3><%= @tching.title %></h3>
+        </div>
+<table class="table table-striped table-bordered">
+     <thead>
+        <tr>
+            
+          <th style="white-space:pre"><%=@tching.content %></th>
+        </tr>
+    </thead>
+</table>
+
+    <div class="center-block">
+        <div class="btn-group">
+            <%= link_to '新規投稿', new_tching_path(@ctg), class: 'btn btn-primary btn-sm' %>
+        </div>
+        <div class="btn-group">
+            <%= link_to 'この投稿を編集する', edit_tching_path(@tching) ,class: 'btn btn-primary btn-sm'%>
+         </div>  
+         <div class="btn-group">
+            <%= link_to 'この投稿を削除する', @tching, method: :delete, data: { confirm: '本当に削除してよろしいですか？' },class: 'btn btn-danger btn-sm' %>
+          </div>  
+    　</div>
+　　
+　　
+    <div class="text-center">　　
+    　　<%= link_to 'カテゴリー一覧に戻る', ctgs_path, class: 'baktop' %>
+    </div>
+ 
+ </div>
+</div>

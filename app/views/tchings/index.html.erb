@@ -1,0 +1,18 @@
+<h2>タイトル一覧</h2>
+
+<ul>
+  <% @tchings.each do |tching| %>
+    <li><%= link_to tching.title, tching, class: 'content' %></li>
+  <% end %>
+ 
+</ul>
+<%= paginate @tchings %>
+
+<div class="btn-toolbar">
+   <div class="btn-group">
+        <%= link_to '新規投稿', new_tching_path(@ctg), class: 'btn btn-primary btn-sm' %>
+    </div>
+</div>
+<%= link_to 'トップ（カテゴリー一覧に戻る）', ctgs_path, class: "baktop" %>
+
+
