@@ -47,8 +47,12 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
+
+  
+  production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: pgstudy_production
   username: pgstudy
-  password: <%= ENV['PGSTUDY_DATABASE_PASSWORD'] %>
+  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
