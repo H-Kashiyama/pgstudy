@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_21_173313) do
+ActiveRecord::Schema.define(version: 2019_09_25_084538) do
 
   create_table "ctgs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "ctg"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2019_09_21_173313) do
   end
 
   create_table "tchings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "content"
     t.string "title"
-    t.string "content"
     t.bigint "ctg_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
