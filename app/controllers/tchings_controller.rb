@@ -1,17 +1,27 @@
 class TchingsController < ApplicationController
     
   def index
-    @tchings = Tching.where(ctg_id: params[:ctg_id]).page(params[:page])
-    #@tchings = Tching.find_by(params[:ctg_id])
+    @ctg = Ctg.find(params[:ctg_id])
+    @tchings = @ctg.tchings.page(params[:page])
+    # @tchings = Tching.where(ctg_id: params[:ctg_id]).page(params[:page])
+    
+    # @tching = Tching.find_by(ctg_id: params[:ctg_id])
+   
+    counts
+    #@count_tchings = @tchings.count
+  
   end
 
   def show
     @tching = Tching.find(params[:id])
+    
   end
  
   def new
-     @tching=Tching.new
-    
+     #@tching = Tching.new
+     #@ctg = Ctg.find_by(params[:id])
+     #@ctg = Ctg.where(ctg_id: params[:ctg_id])
+     @tching = Tching.new(ctg_id: params[:ctg_id])
   end
 
   
@@ -57,5 +67,6 @@ class TchingsController < ApplicationController
   def tching_params
     params.require(:tching).permit(:content, :title, :ctg_id)
   end
-  
+ 
+ 
 end

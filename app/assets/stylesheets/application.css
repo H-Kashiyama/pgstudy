@@ -19,7 +19,7 @@
  /*カテゴリー新規登録ボタン*/
  .newctg {
   color: #001100;
-  font-size: 27px;
+  font-size: 26px;
  }
  
  .table table-striped table-bordered{
@@ -35,3 +35,8 @@
 .content {
   color: navy;
  }
+ 
+ .child {
+ 
+  display: inline;
+}
