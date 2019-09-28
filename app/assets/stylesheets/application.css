@@ -41,7 +41,9 @@
   display: inline;
 }
 
-table {
-width: 250px;
-
+textarea {
+	resize: none;
+	width: 750px;
+	height: 450px;
 }
+
