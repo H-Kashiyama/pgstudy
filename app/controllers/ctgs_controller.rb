@@ -2,7 +2,7 @@ class CtgsController < ApplicationController
     
   def index
     @ctgs = Ctg.all.page(params[:page])
-    counts
+  
   end
  
   def new

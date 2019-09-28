@@ -28,8 +28,10 @@
        <%= f.submit '投稿', class: 'btn btn-primary btn-lg' %>
     <% end %>
 
-    
-    <%= link_to 'トップ（カテゴリー一覧）に戻る', ctgs_path, class: "baktop"%>
+    <div class="text-center">　
+        <%= link_to '戻る', :back %>
+    　　<%= link_to 'カテゴリー一覧に戻る', ctgs_path, class: 'baktop' %>
+    </div>
   </div>
 </div>
 

@@ -4,12 +4,7 @@ class TchingsController < ApplicationController
     @ctg = Ctg.find(params[:ctg_id])
     @tchings = @ctg.tchings.page(params[:page])
     # @tchings = Tching.where(ctg_id: params[:ctg_id]).page(params[:page])
-    
-    # @tching = Tching.find_by(ctg_id: params[:ctg_id])
    
-    counts
-    #@count_tchings = @tchings.count
-  
   end
 
   def show
