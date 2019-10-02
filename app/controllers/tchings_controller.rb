@@ -1,5 +1,5 @@
 class TchingsController < ApplicationController
-    
+  
   def index
     @ctg = Ctg.find(params[:ctg_id])
     @tchings = @ctg.tchings.page(params[:page])
@@ -9,7 +9,7 @@ class TchingsController < ApplicationController
 
   def show
     @tching = Tching.find(params[:id])
-    
+    @ctg_id = @tching.ctg_id
   end
  
   def new

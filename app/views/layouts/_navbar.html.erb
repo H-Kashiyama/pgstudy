@@ -1,15 +1,31 @@
 <header class="mb-4">
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">PG Study</a>
+      <% if logged_in? %>
+            <a class="navbar-brand" href="/">PG Study ：<%= current_user.name %></a>
+      <% else %>
+             <a class="navbar-brand" href="/">PG Study</a>
+      <% end %>
+      
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav">
-     
+        <% if logged_in? %>
+          
+               <li class="navbar-brand"><%= link_to 'Logout', logout_path, class: 'nav-link', method: :delete %></li>
+          
+          
+        <% else %>
+         
+            <li class="navbar-brand"><%= link_to 'Signup', signup_path, class: 'nav-link' %></li>
+            <li class="navbar-brand"><%= link_to 'Login', login_path, class: 'nav-link' %></li>
         
+        <% end %>
       </ul>
+    </div>
     </div>
   </nav>
 </header>

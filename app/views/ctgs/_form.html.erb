@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-6 offset-sm-3">
+  <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-6">
 
 <%= form_with(model: @ctg, local: true) do |f| %>
 
@@ -12,10 +12,11 @@
             </ul>
           </div>
       <% end %>
+  
 
       <div class="form-group" >
-        <label>カテゴリー：</label>
-       <%= f.text_field :ctg, size: "50" %>
+      
+       <%= f.text_field :ctg, class: "form-control" %>
       
       </div>
     
@@ -23,7 +24,7 @@
        
 <% end %>
 
+<%= link_to 'カテゴリー一覧に戻る', ctgs_path, class: 'baktop' %>
     
-    <%= link_to 'トップ（カテゴリー一覧）に戻る', ctgs_path, class: 'baktop' %>
   </div>
 </div>

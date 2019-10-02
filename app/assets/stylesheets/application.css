@@ -14,8 +14,21 @@
  *= require_self
  */
  
- li{font-size: 25px;
-   }
+
+
+ul li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+ 
+  font-size: 25px;
+}
+
+li.child:before {
+  font-family: FontAwesome;
+  content: '\f054'; /* アイコンのunicode */
+  color:navy;
+}
+
  /*カテゴリー新規登録ボタン*/
  .newctg {
   color: #001100;

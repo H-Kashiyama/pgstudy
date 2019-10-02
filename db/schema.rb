@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_25_084538) do
+ActiveRecord::Schema.define(version: 2019_09_29_233850) do
 
   create_table "ctgs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "ctg"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 2019_09_25_084538) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ctg_id"], name: "index_tchings_on_ctg_id"
+  end
+
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "tchings", "ctgs"

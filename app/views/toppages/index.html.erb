@@ -1,0 +1,12 @@
+<% if logged_in? %>
+  <%= link_to 'カテゴリー一覧へ', ctgs_path, class: 'btn btn-lg btn-primary' %>
+<% else %>
+  <div class="center jumbotron">
+    <div class="text-center">
+      <h1>Welcome to the PGStudy</h1>
+      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
+<% end %>
+
+  
