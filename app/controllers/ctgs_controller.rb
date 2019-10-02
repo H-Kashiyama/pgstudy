@@ -1,7 +1,7 @@
 class CtgsController < ApplicationController
   before_action :require_user_logged_in
 
-  before_action :correct_user, only: [:destroy, :show, :edit, :update]
+ 
   
   def index
     @ctgs = Ctg.all.page(params[:page])
@@ -53,13 +53,9 @@ class CtgsController < ApplicationController
     params.require(:ctg).permit(:ctg)
      
   end
-  def correct_user
-    @ctgs = current_user.feed_ctgs.order(id: :desc).page(params[:page])
-    unless @mctg
-      redirect_to root_url
-    end
-  end
-   
+  
+ 
+
  
 
 end
