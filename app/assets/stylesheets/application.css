@@ -23,13 +23,7 @@ ul li {
   font-size: 25px;
 }
 
-li.child:before {
-  font-family: "Font Awesome 5 Free";
-  /*font-family: FontAwesome;*/
-  content: '\f054'; /* アイコンのunicode */
-  color:navy;
-  font-weight: 900; /*←ココ！！！！！！！*/
-}
+
 
  /*カテゴリー新規登録ボタン*/
  .newctg {
