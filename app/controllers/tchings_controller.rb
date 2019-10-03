@@ -1,6 +1,6 @@
 class TchingsController < ApplicationController
   
-   include ApplicationHelper  
+   
   
   def index
     @ctg = Ctg.find(params[:ctg_id])
