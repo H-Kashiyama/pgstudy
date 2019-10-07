@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
  
   resources :ctgs
-  resources :tchings
+  resources :tchings do
+    collection do
+      get :search
+    end
+  end
   get 'signup', to: 'users#new' #ユーザの新規登録 URL を /signup にするため
   resources :users, only: [:index, :show, :new, :create]
   

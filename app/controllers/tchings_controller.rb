@@ -58,6 +58,11 @@ class TchingsController < ApplicationController
     redirect_to root_url
  
   end
+  def search
+    @tchings =Tching.where("content like '%" + params[:q] + "%'").page(params[:page])
+    render :serch
+   
+  end
   
   private
   

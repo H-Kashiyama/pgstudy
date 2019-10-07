@@ -1,0 +1,13 @@
+
+<div class="card">
+    <div class="card-header">
+        カテゴリー一覧
+    </div>
+    <div class="card-body">
+        <ul>
+            <% Ctg.all.each do |ctg| %>
+                <li><%= link_to ctg.ctg, tchings_path(ctg_id: ctg.id) %></li>
+            <% end %>
+　　　　</ul>
+    </div>
+</div>

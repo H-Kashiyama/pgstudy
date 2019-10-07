@@ -1,13 +1,14 @@
 <div class="container">
-  <h2>タイトル一覧</h2><p>（カテゴリー：<%= @ctg.ctg %>）<%= @tchings.count %>件</p>
-  <div class="mt-4 row">
-    <div class="col-sm-6">
+  <h2>タイトル一覧</h2></p>
+  <div class="row">
+    <div class="col-8">
       <ul>
         <% @tchings.each do |tching| %>
           <li><%= link_to tching.title, tching, class: 'content' %></li>
         <% end %>
       </ul>
       <%= paginate @tchings %>
+      
       <% if current_user.id ==1 %>
         <div class="btn-toolbar">
           <div class="btn-group">
@@ -16,7 +17,7 @@
         </div>
       <% end %>
     </div>
-    <div class="col-sm-6">
+    <div class="col-4">
       <%= render "layouts/sidebar" %>
     </div>
   </div>
