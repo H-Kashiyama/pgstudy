@@ -1,6 +1,6 @@
 <div class="container">
   <h2>タイトル一覧</h2><p>（カテゴリー：<%= @ctg.ctg %>）<%= @tchings.count %>件</p>
-  <div class="mt-2 row">
+  <div class="mt-1 row">
     <div class="col-sm-6">
       <ul>
         <% @tchings.each do |tching| %>
@@ -10,16 +10,17 @@
       <%= paginate @tchings %>
       <% if current_user.id ==1 %>
         <div class="btn-toolbar">
-          <div class="btn-group">
+          <div class="btn-group btn-h">
             <%= link_to '新規投稿', new_tching_path(ctg_id: params[:ctg_id]), class: 'btn btn-primary btn-sm' %>
           </div>
         </div>
       <% end %>
     </div>
-  
-    <div class="col-sm-6 mt-1 row">
+ 
+    <div class="col-sm-6">
       <%= render "layouts/sidebar" %>
     </div>
+  
   </div>
   <div class="row">
     <div class="col-12">

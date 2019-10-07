@@ -5,7 +5,7 @@
            
           <% @ctgs.each do |ctg| %>
            <div class="center-block">
-               <div>
+              <div>
                  <li class ="child"><i class="fas fa-angle-right"></i> <%= link_to ctg.ctg, tchings_path(ctg_id: ctg.id) %></li>
                  <p class ="child">（<%= ctg.tchings.count %>件）</p>
              </div>   
@@ -34,8 +34,13 @@
                <div class="btn-group">
                     <%= link_to '新規投稿', new_tching_path, class: 'btn btn-primary btn-sm' %>
                 </div>
+                
+                 
            
         <% end %>
+        
+        
+       
   
 
 

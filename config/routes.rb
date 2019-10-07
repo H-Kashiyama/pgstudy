@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     end
   end
   get 'signup', to: 'users#new' #ユーザの新規登録 URL を /signup にするため
-  resources :users, only: [:index, :show, :new, :create]
+  resources :users, only: [:index, :show, :new, :create, :destroy]
   
 end

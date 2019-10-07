@@ -59,6 +59,7 @@ class TchingsController < ApplicationController
  
   end
   def search
+    @keyw = params[:q]
     @tchings =Tching.where("content like '%" + params[:q] + "%'").page(params[:page])
     render :serch
    

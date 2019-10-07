@@ -6,7 +6,10 @@
     <div class="card-body">
         <ul>
             <% Ctg.all.each do |ctg| %>
-                <li><%= link_to ctg.ctg, tchings_path(ctg_id: ctg.id) %></li>
+            <div>
+                <li class ="child"><i class="fas fa-angle-right"></i><%= link_to ctg.ctg, tchings_path(ctg_id: ctg.id) %></li>
+                <p class ="child">（<%= ctg.tchings.count %>件）</p>
+            </div>
             <% end %>
 　　　　</ul>
     </div>
