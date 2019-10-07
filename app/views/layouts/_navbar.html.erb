@@ -13,7 +13,8 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
          <%= form_with(url: search_tchings_path, method: :get, local: true) do |f| %>
-           <%= text_field_tag :q, "", placeholder: "検索ワードを入力してください。" %>
+         　<a style="color: white;">キーワード検索：</a>
+           <%= text_field_tag :q, "", placeholder: "検索ワードを入力！" %>
            <%= submit_tag "検索" %>
          <% end %>
       <ul class="navbar-nav">

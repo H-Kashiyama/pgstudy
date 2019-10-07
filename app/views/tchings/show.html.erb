@@ -9,7 +9,7 @@
       </div> -->
 <div class="table-responsive">
     <table class="table table-striped table-bordered ">
-       <% urchgtext = text_url_to_link(simple_format(@tching.content)).html_safe %>
+       <% urchgtext = text_url_to_link(simple_format(h(@tching.content))).html_safe %>
       <td><%= urchgtext %></td>
   
     </table>
