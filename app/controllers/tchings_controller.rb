@@ -12,8 +12,25 @@ class TchingsController < ApplicationController
   def show
     @tching = Tching.find(params[:id])
     @ctg_id = @tching.ctg_id
+  
   end
+  
+  def search
+    
+    @keyw = params[:q]
+    @tchings =Tching.where("content like '%" + params[:q] + "%'").page(params[:page])
+   
+    render :serch
+   
+  end
+  
+  def serchshow
+    @tching = Tching.find(params[:id])
+  
+  end
+  
  
+  
   def new
      #@tching = Tching.new
      #@ctg = Ctg.find_by(params[:id])
@@ -58,12 +75,7 @@ class TchingsController < ApplicationController
     redirect_to root_url
  
   end
-  def search
-    @keyw = params[:q]
-    @tchings =Tching.where("content like '%" + params[:q] + "%'").page(params[:page])
-    render :serch
-   
-  end
+ 
   
   private
   

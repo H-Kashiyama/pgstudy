@@ -15,7 +15,7 @@
     <% end %>
     
       <div class="form-group">
-       <%= f.collection_select :ctg_id, Ctg.all, :id, :ctg, { include_blank: true } %>←カテゴリーを選択してください。
+       <%= f.collection_select :ctg_id, Ctg.all, :id, :ctg, { include_blank: true }, class: "select1" %>  ←カテゴリーを選択してください。
       </div>
       <div class="form-group">
       <label>タイトル：</label>

@@ -1,4 +1,4 @@
-<header class="mb-4">
+<header class="mb-0">
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <% if logged_in? %>
             <a class="navbar-brand" href="/">PG Study ：<%= current_user.name %></a>
@@ -13,11 +13,12 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <% if logged_in? %>
-         <%= form_with(url: search_tchings_path, method: :get, local: true) do |f| %>
+         <%= form_with(url: search_tchings_path, method: :get, local: true, class: "form-inline") do |f| %>
          <a style="color: white;">キーワード検索：</a>
-           <%= text_field_tag :q, "", placeholder: " 検索ワードを入力！", class: "bg-light" %>
-           <%= submit_tag "検索", class: "btn btn-info btn-sm" %>
+           <%= text_field_tag :q, "", placeholder: " 検索ワードを入力！", class: "form-control mr-sm-1" %>
+           <%= submit_tag "検索", class: "btn btn-info" %>
          <% end %>
+         
         <% end %>
       <ul class="navbar-nav">
         <% if logged_in? %>

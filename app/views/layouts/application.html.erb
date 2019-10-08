@@ -19,12 +19,22 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
-
-    <div class="container">
-      <%= render 'layouts/flash_messages' %>
-      <%= yield %>
-      
-    </div>
-  </body>
+        <%= render 'layouts/navbar' %>
+      <div class="jumbotron">
+          <div class="container">
+            
+            <%= render 'layouts/flash_messages' %>
+            <%= yield %>
+            
+          </div>
+        </div>
+        
+      <footer class="mt-2 fixed-bottom">
+        <div class="text-center">
+          <p class="text-muted">2019.by Hideto Kashiyama</p>
+        </div>
+      </footer>
+</body>
+  
+  
 </html>

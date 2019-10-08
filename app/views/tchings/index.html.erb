@@ -1,7 +1,9 @@
 <div class="container">
-  <h2>タイトル一覧</h2><p>（カテゴリー：<%= @ctg.ctg %>）<%= @tchings.count %>件</p>
   <div class="mt-1 row">
     <div class="col-sm-6">
+  <h2>タイトル一覧</h2>
+  <p>（カテゴリー：<%= @ctg.ctg %>）<%= @tchings.count %>件</p>
+  
       <ul>
         <% @tchings.each do |tching| %>
           <li><%= link_to tching.title, tching, class: 'content' %></li>

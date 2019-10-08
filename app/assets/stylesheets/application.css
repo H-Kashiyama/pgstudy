@@ -13,7 +13,26 @@
  *= require_tree .
  *= require_self
  */
+ .card{
+  margin-top: 10px;
+ }
+
+ .jumbotron{
+    padding-top: 10px;
+    height: 120vh;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+ }
  
+
+ .select1 {
+    width: 225px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #EEEEEE;
+    box-shadow: 0 2px 0 gray;
+    border-radius: 7px;
+ }
 .btn-h{
   margin : 5px ;
 }

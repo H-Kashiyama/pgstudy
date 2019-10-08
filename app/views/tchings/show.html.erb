@@ -27,15 +27,17 @@
          <div class="btn-group">
             <%= link_to '投稿を削除する', @tching, method: :delete, data: { confirm: '本当に削除してよろしいですか？' },class: 'btn btn-danger btn-sm' %>
           </div>  
-    　</div>
+     </div>
     
 <% end %>
-　　
-　　
-    <div class="text-center">　
-       
-        <%= link_to 'タイトル一覧に戻る', tchings_path(ctg_id: @ctg_id) %>
-    　　<%= link_to 'カテゴリー一覧に戻る', ctgs_path, class: 'baktop' %>
+
+
+    <div class="text-center">
+      
+          <%= link_to 'タイトル一覧に戻る', tchings_path(ctg_id: @ctg_id) %>
+   
+        
+     <%= link_to 'カテゴリー一覧に戻る', ctgs_path, class: 'baktop' %>
     </div>
  
  </div>
