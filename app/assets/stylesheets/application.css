@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
- .container{
-  background-color: #EEEEEE;
+ 
+ .card-header{
+  background-color: #CCCCCC;
   
  }
  .card{
@@ -26,6 +27,7 @@
     height: 120vh;
     padding-bottom: 0px;
     margin-bottom: 0px;
+    background-color: #F5F5F5;
  }
  
 
