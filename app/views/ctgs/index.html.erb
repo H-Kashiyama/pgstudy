@@ -2,25 +2,25 @@
 <h2>カテゴリー一覧</h2>
 
         <ul>
-           
+        <div class="center-block">
           <% @ctgs.each do |ctg| %>
-           <div class="center-block">
+          
               <div>
-                 <li class ="child"><i class="fas fa-angle-right"></i> <%= link_to ctg.ctg, tchings_path(ctg_id: ctg.id) %></li>
+                 <li class ="child"><i class="fas fa-arrow-alt-circle-right"></i> <%= link_to ctg.ctg, tchings_path(ctg_id: ctg.id) %></li>
                  <p class ="child">（<%= ctg.tchings.count %>件）</p>
-             </div>   
-           <% if current_user.id ==1 %>
-              <div class="btn-group">
-                <%= link_to "編集", edit_ctg_path(id: ctg.id), class: 'btn btn-primary btn-sm' %>
-              </div>
-               <div class="btn-group">
-                <%= link_to "削除", ctg, method: :delete, data: { confirm: "このカテゴリーに紐づいた投稿もすべて削除されますがよろしいですか?" }, class: 'btn btn-danger btn-sm' %>
-               </div>
-              </div>
-           <% end %>
+               
+                   <% if current_user.id ==1 %>
+                      <div class="btn-group">
+                        <%= link_to "編集", edit_ctg_path(id: ctg.id), class: 'btn btn-primary btn-sm' %>
+                      </div>
+                       <div class="btn-group">
+                        <%= link_to "削除", ctg, method: :delete, data: { confirm: "このカテゴリーに紐づいた投稿もすべて削除されますがよろしいですか?" }, class: 'btn btn-danger btn-sm' %>
+                       </div>
                       
+                   <% end %>
+              </div>        
           <% end %>
-         
+         </div>
         </ul>
         
         <%= paginate @ctgs %>
