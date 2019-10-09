@@ -24,7 +24,7 @@
 
  .jumbotron{
     padding-top: 10px;
-    height: 120vh;
+    height: 1000vh;
     padding-bottom: 0px;
     margin-bottom: 0px;
     background-color: #F5F5F5;
@@ -81,5 +81,22 @@ textarea {
 	resize: none;
 	width: 750px;
 	height: 450px;
+}
+
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer{
+  width: 100%;
+    background-color:#444444;
+    text-align: center;
+    padding: 5px 0;
+    color: white;
+    
+     flex:0 0 auto;
 }
 

@@ -4,7 +4,7 @@ class CtgsController < ApplicationController
  
   
   def index
-    @ctgs = Ctg.all.page(params[:page])
+    @ctgs = Ctg.order(id: :asc).page(params[:page]).per(20)
   
   end
  

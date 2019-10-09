@@ -4,7 +4,7 @@ class TchingsController < ApplicationController
   
   def index
     @ctg = Ctg.find(params[:ctg_id])
-    @tchings = @ctg.tchings.page(params[:page])
+    @tchings = @ctg.tchings.order(id: :asc).page(params[:page]).per(10)
     # @tchings = Tching.where(ctg_id: params[:ctg_id]).page(params[:page])
    
   end
