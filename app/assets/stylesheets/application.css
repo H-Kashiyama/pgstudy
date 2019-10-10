@@ -21,7 +21,9 @@
  
  td{
   background-color: #CCCCCC;
-  height: 80vh;
+  resize: none;
+	width: 750px;
+	height: 300px;
   overflow-y:scroll;
  }
  .card{
@@ -39,7 +41,7 @@
  .jumbotron-extend {
     position: relative;
     height: 100vh;
-    min-height: 300px;
+   
     background-color: #F5F5F5;
 }
 
@@ -91,23 +93,20 @@ ul li {
 }
 
 textarea {
-	resize: none;
-	width: 750px;
-	height: 350px;
+	
 }
 
-body,
-#wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+.container {
+  
+  min-height: 90vh;
 }
+
 
 footer{
   width: 100%;
     background-color:#444444;
     text-align: center;
-    padding: 5px 0;
+    padding: 2px 0;
     color: white;
     
      flex:0 0 auto;
