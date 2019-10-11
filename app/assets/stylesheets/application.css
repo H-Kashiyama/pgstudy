@@ -19,12 +19,27 @@
   
  }
  
+ 
   .tb{
+    overflow:auto;
     max-height: 80vh;
+    background-color: #CCCCCC;
+    position: relative;
     
+    padding:5px;
+    border:2px solid #000;
+    
+    color:#000;
+    font-size:16px;
+    margin-top: 3px
   }
+  
  .card{
   margin-top: 10px;
+ }
+ 
+ .card-body{
+  padding:5px;
  }
 
  /*.jumbotron{
@@ -37,12 +52,27 @@
  
  .jumbotron-extend {
     position: relative;
-    height: 100vh;
-   
+    height: 90vh;
+    padding-top: 1px;
     background-color: #F5F5F5;
+    margin-bottom: 0px ;
 }
 
+footer{
+    width: 100%;
+    background-color:#444444;
+    text-align: center;
+    padding: 2px 0;
+    color: white;
+    position: absolute;
+    margin-bottom:0; /*下に固定*/
+}
+ 
 
+.container {
+  
+  max-height: 100vh;
+}
  
 
  .select1 {
@@ -53,18 +83,16 @@
     box-shadow: 0 2px 0 gray;
     border-radius: 7px;
  }
+ 
 .btn-h{
-  margin : 5px ;
+  margin-bottom: 5px ;
 }
 
 ul li {
   line-height: 1.5;
-  padding: 0.5em 0;
- 
-  font-size: 25px;
+  padding: 0 0;
+  font-size: 20px;
 }
-
-
 
  /*カテゴリー新規登録ボタン*/
  .newctg {
@@ -87,6 +115,7 @@ ul li {
  .child {
  
   display: inline;
+  margin: 5px;
   
 }
 
@@ -94,19 +123,7 @@ textarea {
 	
 }
 
-.container {
-  
-  min-height: 90vh;
-}
 
 
-footer{
-    width: 100%;
-    background-color:#444444;
-    text-align: center;
-    padding: 2px 0;
-    color: white;
-    position: relative;
-    bottom: 0; /*下に固定*/
-}
- 
+
+
