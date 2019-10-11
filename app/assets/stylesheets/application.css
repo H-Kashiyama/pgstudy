@@ -19,20 +19,37 @@
   
  }
  
- 
+ .toprap{
+  
+  text-align: left;
+ }
+
   .tb{
     overflow:auto;
-    max-height: 80vh;
+    min-height: 80vh;
     background-color: #CCCCCC;
     position: relative;
     
     padding:5px;
-    border:2px solid #000;
+    border:1px solid #000;
     
     color:#000;
     font-size:16px;
     margin-top: 3px
   }
+  
+  textarea {
+
+    background-color: #CCCCCC;
+    position: relative;
+    
+    padding:5px;
+    border:3px ;
+    
+    color:#000;
+    font-size:16px;
+
+}
   
  .card{
   margin-top: 10px;
@@ -50,11 +67,11 @@
     background-color: #F5F5F5;
  }*/
  
- .container {
+ .container-fluid {
     position: relative;
    min-height: 80vh;
     background-color: #F5F5F5;
-    margin-bottom: 0px ;
+    margin: 0px ;
 }
 
 body,
@@ -132,9 +149,7 @@ ul li {
   
 }
 
-textarea {
-	
-}
+
 
 
 
