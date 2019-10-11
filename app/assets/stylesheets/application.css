@@ -52,21 +52,37 @@
  
  .container {
     position: relative;
-    min-height:100vh;
-    
+   min-height: 80vh;
     background-color: #F5F5F5;
     margin-bottom: 0px ;
 }
 
-footer{
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+ 
+footer {
+    margin-top: auto;
     width: 100%;
+    background-color:#444444;
+    text-align: center;
+    
+    color: white;
+   
+}
+/*footer{
+    width: 100%;
+    
     background-color:#444444;
     text-align: center;
     padding: 2px 0;
     color: white;
     position: absolute;
-    margin-bottom:0; /*下に固定*/
-}
+    margin-bottom:0; /*下に固定
+}*/
  
 
 
