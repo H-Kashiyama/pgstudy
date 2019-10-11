@@ -50,10 +50,10 @@
     background-color: #F5F5F5;
  }*/
  
- .jumbotron-extend {
+ .container {
     position: relative;
-    height: 90vh;
-    padding-top: 1px;
+    min-height:100vh;
+    
     background-color: #F5F5F5;
     margin-bottom: 0px ;
 }
@@ -69,10 +69,7 @@ footer{
 }
  
 
-.container {
-  
-  max-height: 100vh;
-}
+
  
 
  .select1 {
