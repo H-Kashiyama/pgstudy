@@ -4,15 +4,18 @@
         <div class="text-center">
          <h3><%= @tching.title %></h3>
         </div>
-     <!--<div> 
-        <table class="table table-responsive table-bordered">
-          <% urchgtext = text_url_to_link(simple_format(h(@tching.content))).html_safe %>
-          <td><%= urchgtext %></td>
+    <div> 
       
-        </table> -->
-   <div class="form-group" > 
+            <table class="table table-responsive table-bordered">
+        
+              <% urchgtext = text_url_to_link(simple_format(h(@tching.content))).html_safe %>
+              <td><div class="tb"><%= urchgtext %></div></td>
+          
+            </table>
+        
+   <!--<div class="form-group" > 
         <% urchgtext = text_url_to_link(simple_format(h(@tching.content))).html_safe %>
-<textarea class="form-control" rows="15" readonly><%=urchgtext %></textarea>
+    <textarea class="form-control" rows="20" readonly><%=urchgtext %></textarea>-->
       
 
 
