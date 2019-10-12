@@ -1,7 +1,5 @@
 class TchingsController < ApplicationController
-  
-   
-  
+ 
   def index
     @ctg = Ctg.find(params[:ctg_id])
     @tchings = @ctg.tchings.order(id: :asc).page(params[:page]).per(10)
@@ -9,27 +7,20 @@ class TchingsController < ApplicationController
    
   end
 
-  def show
-    @tching = Tching.find(params[:id])
-    @ctg_id = @tching.ctg_id
-  
-  end
-  
   def search
     
     @keyw = params[:q]
-    @tchings =Tching.where("content like '%" + params[:q] + "%'").page(params[:page])
-   
+    @tchings =Tching.where("content like '%" + @keyw + "%'").page(params[:page])
+    
     render :serch
    
   end
   
-  def serchshow
+  def show
     @tching = Tching.find(params[:id])
-  
+    @ctg_id = @tching.ctg_id
+   
   end
-  
- 
   
   def new
      #@tching = Tching.new

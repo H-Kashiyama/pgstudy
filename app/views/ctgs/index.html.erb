@@ -18,10 +18,10 @@
                  <p class ="child">（<%= ctg.tchings.count %>件）</p>
                 
                    <% if current_user.id ==1 %>
-                      <div class="btn-group">
+                      <div class="btn-group topp">
                         <%= link_to "編集", edit_ctg_path(id: ctg.id), class: 'btn btn-primary btn-sm' %>
                       </div>
-                       <div class="btn-group">
+                       <div class="btn-group topp">
                         <%= link_to "削除", ctg, method: :delete, data: { confirm: "このカテゴリーに紐づいた投稿もすべて削除されますがよろしいですか?" }, class: 'btn btn-danger btn-sm' %>
                        </div>
                       

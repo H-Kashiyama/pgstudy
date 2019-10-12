@@ -13,7 +13,13 @@
  *= require_tree .
  *= require_self
  */
+@media screen and (max-width: 768px) {
+ 
+ .btn-group.topp{
+  visibility: hidden;
+ }
 
+}
  .card-header{
   background-color: #CCCCCC;
   
@@ -26,13 +32,13 @@
 
   .tb{
     overflow:auto;
-    min-height: 80vh;
-    background-color: #CCCCCC;
+    min-height: 85vh;
+    background-color: #EEEEEE;
     position: relative;
     
     padding:5px;
-    border:1px solid #000;
-    
+    border:3px;
+    border-style: inset;
     color:#000;
     font-size:16px;
     margin-top: 3px
@@ -100,10 +106,6 @@ footer {
     position: absolute;
     margin-bottom:0; /*下に固定
 }*/
- 
-
-
- 
 
  .select1 {
     width: 225px;
@@ -115,7 +117,7 @@ footer {
  }
  
 .btn-h{
-  margin-bottom: 5px ;
+  margin-bottom: 2px ;
 }
 
 ul li {
