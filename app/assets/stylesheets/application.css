@@ -15,9 +15,9 @@
  */
 @media screen and (max-width: 768px) {
  
- .btn-group.topp{
-  visibility: hidden;
- }
+  .btn-group.topp{
+   visibility: hidden;
+  }
 
 }
  .card-header{
@@ -150,6 +150,22 @@ ul li {
   margin: 5px;
   
 }
+
+.childchild{
+ margin-top: 0px;
+ padding-top: 0px;
+}
+
+.cap{
+ display: inline-block;
+
+}
+
+.btn.btn-primary.btn-sm.cap{
+  margin-left: 5px;
+  margin-bottom: 10px;
+ }
+
 
 
 

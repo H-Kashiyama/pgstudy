@@ -2,16 +2,15 @@
   <div class="mt-2 row">
     <div class="col-sm-6">
 
-  <h3 class= "child">タイトル一覧</h3>
+ <h3 class="cap">タイトル一覧 </h3>
   
    <% if current_user.id ==1 %>
-        <div class="btn-toolbar child">
-          <div class="btn-group btn-sm ml-3">
-            <%= link_to '新規投稿', new_tching_path(ctg_id: params[:ctg_id]), class: 'btn btn-primary btn-sm' %>
-          </div>
-        </div>
+        
+        <%= link_to '新規投稿', new_tching_path(ctg_id: params[:ctg_id]), class: 'btn btn-primary btn-sm cap' %>
+          
       <% end %>
-    
+   
+  
       <p>（カテゴリー：<%= @ctg.ctg %>）<%= @tchings.count %>件</p>
       <ul>
         <% @tchings.each do |tching| %>

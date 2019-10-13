@@ -16,7 +16,7 @@
         <% @tchings.each do |tching| %>
         
           <li><%= link_to tching.title, tching_path(tching, q: params[:q]), class: 'content' %></li>
-         
+          
         <% end %>
       </ul>
       <%= paginate @tchings %>
