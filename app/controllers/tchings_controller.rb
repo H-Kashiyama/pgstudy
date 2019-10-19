@@ -60,11 +60,17 @@ class TchingsController < ApplicationController
 
   def destroy
     @tching = Tching.find(params[:id]) 
+    @ctg_id = @tching.ctg_id
     @tching.destroy
-
+   
     flash[:success] = '内容は正常に削除されました'
-    redirect_to root_url
- 
+    redirect_to tchings_url(ctg_id: @ctg_id)
+    
+    #redirect_to tchings_url
+    #redirect_to tching_path(params[:id])
+    #redirect_to root_path
+    #redirect_to :action => 'index'
+    
   end
  
   
