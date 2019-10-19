@@ -21,10 +21,18 @@
              </div>
             
             <div style="text-align: right">
+                
+                  <% if params[:q] != nil %>
+       
+                        <%= link_to 'タイトル一覧に戻る', search_tchings_path(q: params[:q]) %>
+                  <% else %>    
+                       <%= link_to 'タイトル一覧に戻る', tchings_path(ctg_id: @ctg_id) %>
+                  <% end %>   
         
                <div class="btn-group btn-h">
                         <%= link_to '新規投稿', new_tching_path(@ctg), class: 'btn btn-primary btn-sm' %>
                </div>
+               
              </div>
            
           <% end %>
@@ -49,12 +57,7 @@
            
        <% end %>-->
        
-          <% if params[:q] != nil %>
-       
-               <%= link_to 'タイトル一覧に戻る', search_tchings_path(q: params[:q]) %>
-          <% else %>    
-               <%= link_to 'タイトル一覧に戻る', tchings_path(ctg_id: @ctg_id) %>
-          <% end %>   
+          
           
                <%= link_to 'カテゴリー一覧に戻る', ctgs_path, class: 'baktop' %>
        
